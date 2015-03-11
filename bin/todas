@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+lines = $stdin.readlines.map { |l| l.chomp }
+
+cantidad = lines.size
+
+1.upto(cantidad).map do |t|
+  lines.permutation(t).to_a.each do |p|
+    puts p.join(' ')
+  end
+end
